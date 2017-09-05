@@ -1,4 +1,4 @@
 <?php
-$con = mysqli_connect("127.0.0.1","root","","db_testeweb") or die("Não foi possivel realizar a conexão com o servidor");
+$con = mysqli_connect("localhost","id2815318_user","1234567","id2815318_db_desafioweb") or die("Não foi possivel realizar a conexão com o servidor");
 
 ?>

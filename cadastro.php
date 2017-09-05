@@ -1,6 +1,5 @@
 <?php
 	require_once "connection.php";
-	
 ?>
 <html>
 	<head>
@@ -13,6 +12,7 @@
 		<P id="titulo"> Cadastro </p> 
 		<form method= "POST" action="?go=cadastrar" name ="form" onSubmit="return validacao();" >
 			<table id="table" >
+				<tr>
 					<td> Tipo</td>
 					<td> <input type="text" name="tipo" id="tipo" class="txt"/> </td>
 				</tr>
@@ -51,11 +51,8 @@
 		$quantidade = $_POST['quantidade'];
 		$preco = $_POST['preco'];
 		$tipoNegociacao = $_POST['tipoNegociacao'];
-		//if (($tipo != "")&&($nome != "")){
-			mysqli_query($con,"INSERT INTO `tb_mercadorias`( `TIPO_MERC`,`NOME_MERC`,`QUAN_MERC`,`PRECO`,`TIPO_NEG`) VALUES ('$tipo','$nome','$quantidade','$preco','$tipoNegociacao')");
-			echo "<script> alert ('Registro armazenado!') </script>";
-			echo "<meta http-equiv='refresh' content='0, url=operacoes.php'>";
-		//}
-		
+		mysqli_query($con,"INSERT INTO `TB_MERCADORIAS`( `TIPO_MERC`,`NOME_MERC`,`QUAN_MERC`,`PRECO_MERC`,`TIPO_NEGOCIO`) VALUES ('$tipo','$nome','$quantidade','$preco','$tipoNegociacao')");
+		echo "<script> alert ('Registro armazenado!') </script>";
+		echo "<meta http-equiv='refresh' content='0, url=operacoes.php'>";
 	}
 ?>

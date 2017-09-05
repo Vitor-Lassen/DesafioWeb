@@ -1,7 +1,7 @@
 
 
 function validacao(){
-	if((document.form.tipo.value == "")||(document.form.nome.value == "")){
+	if((document.form.tipo.value == "")||(document.form.nome.value == "")||(document.form.quantidade.value == "")||(document.form.preco.value == "")){
 		alert("prencha todos os campos ");
 		return false;
 	}	
